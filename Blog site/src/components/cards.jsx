@@ -6,6 +6,8 @@ import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import ReactImg from "../assets/react.png";
+import JavaScript from "../assets/javascript.jpg";
+import Python from "../assets/python.png";
 
 const Cards = () => {
   return (
@@ -85,14 +87,14 @@ const Cards = () => {
             <CardMedia
               component="img"
               height="300"
-              image={ReactImg}
+              image={JavaScript}
               alt="Paella dish"
             />
             <CardContent>
               <Typography variant="body2" color="text.secondary">
-                React is a free and open-source front-end JavaScript library.
-                This series will cover React from starting to the end. We will
-                learn react from the ground up!
+                This latest JavaScript course comes with premium curriculum that
+                covers everything from basics to advance. On top of that, you
+                will get my handwritten notes of JS for completely free!
               </Typography>
               <Button
                 variant="outlined"
@@ -122,14 +124,14 @@ const Cards = () => {
             <CardMedia
               component="img"
               height="300"
-              image={ReactImg}
+              image={Python}
               alt="Paella dish"
             />
             <CardContent>
               <Typography variant="body2" color="text.secondary">
-                React is a free and open-source front-end JavaScript library.
-                This series will cover React from starting to the end. We will
-                learn react from the ground up!
+                Python is one of the most demanded programming languages in the
+                job market. Surprisingly, it is equally easy to learn and master
+                Python!
               </Typography>
               <Button
                 variant="outlined"
@@ -199,14 +201,14 @@ const Cards = () => {
             <CardMedia
               component="img"
               height="300"
-              image={ReactImg}
+              image={JavaScript}
               alt="Paella dish"
             />
             <CardContent>
               <Typography variant="body2" color="text.secondary">
-                React is a free and open-source front-end JavaScript library.
-                This series will cover React from starting to the end. We will
-                learn react from the ground up!
+                This latest JavaScript course comes with premium curriculum that
+                covers everything from basics to advance. On top of that, you
+                will get my handwritten notes of JS for completely free!
               </Typography>
               <Button
                 variant="outlined"
@@ -236,14 +238,14 @@ const Cards = () => {
             <CardMedia
               component="img"
               height="300"
-              image={ReactImg}
+              image={Python}
               alt="Paella dish"
             />
             <CardContent>
               <Typography variant="body2" color="text.secondary">
-                React is a free and open-source front-end JavaScript library.
-                This series will cover React from starting to the end. We will
-                learn react from the ground up!
+                Python is one of the most demanded programming languages in the
+                job market. Surprisingly, it is equally easy to learn and master
+                Python!
               </Typography>
               <Button
                 variant="outlined"
