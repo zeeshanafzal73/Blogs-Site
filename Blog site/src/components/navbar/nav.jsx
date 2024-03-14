@@ -76,7 +76,7 @@ const NAVBAR = ({ theme }) => {
   };
 
   return (
-    <AppBar position="static" sx={{ bgcolor: "white" }} className="nav">
+    <AppBar position="static" sx={{ bgcolor: "white" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -141,8 +141,8 @@ const NAVBAR = ({ theme }) => {
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
-            variant="h5"
+          {/* <Typography
+            variant="h6"
             flexWrap
             component="a"
             href=""
@@ -158,7 +158,7 @@ const NAVBAR = ({ theme }) => {
             }}
           >
             CodeWithZishi
-          </Typography>
+          </Typography> */}
           <Box
             sx={{
               flexGrow: 1,
@@ -197,7 +197,8 @@ const NAVBAR = ({ theme }) => {
             sx={{
               flexGrow: 1,
               display: { xs: "flex", md: "none" },
-              justifyContent: "flex-end",
+              justifyContent: "center",
+              alignItems:"center"
             }}
           >
             <Search>
