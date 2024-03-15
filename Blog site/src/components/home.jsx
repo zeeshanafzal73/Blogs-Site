@@ -6,7 +6,10 @@ import { Container } from "@mui/material";
 const Home = () => {
   return (
     <>
-      <Container maxWidth="xl" style={{paddingLeft:'0px', paddingRight: '0px'}}>
+      <Container
+        maxWidth="xl"
+        style={{ paddingLeft: "0px", paddingRight: "0px" }}
+      >
         <HeroSection />
         <Cards />
         <Testimonial />

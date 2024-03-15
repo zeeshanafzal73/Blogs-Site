@@ -8,7 +8,7 @@ const Testimonial = () => {
       <Box
         sx={{
           display: { xs: "none", md: "flex" },
-          marginTop: "150px",
+          marginTop: "110px",
           flexWrap: "wrap",
           justifyContent: "center",
         }}
