@@ -12,6 +12,7 @@ import REACT from "./components/react";
 import DRF from "./components/drf";
 import PYTHON from "./components/python";
 import NAVBAR from "./components/navbar/nav";
+import Footer from "./components/footer/footer";
 
 const theme = createTheme({
   typography: {
@@ -36,6 +37,7 @@ const App = () => {
             <Route path="/drf" element={<DRF theme={theme} />} />
             <Route path="/python" element={<PYTHON theme={theme} />} />
           </Routes>
+          <Footer />
         </Router>
       </ThemeProvider>
     </>
