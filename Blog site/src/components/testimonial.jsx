@@ -59,7 +59,7 @@ const Testimonial = () => {
                 I don't have words to thank this man, I'm really grateful to
                 have this channel and website in my daily routine. If you're a
                 mere beginner, then you can trust this guy and can put your time
-                into his content. 
+                into his content.
               </Typography>
               <Typography
                 variant="subtitle1"
