@@ -1,13 +1,16 @@
-import NAVBAR from "./navbar/nav";
 import HeroSection from "./herosection";
 import Cards from "./cards";
+import Testimonial from "./testimonial";
+import { Container } from "@mui/material";
 
-const Home = ({ theme }) => {
+const Home = () => {
   return (
     <>
-      <NAVBAR theme={theme} />
-      <HeroSection />
-      <Cards />
+      <Container maxWidth="xl" style={{paddingLeft:'0px', paddingRight: '0px'}}>
+        <HeroSection />
+        <Cards />
+        <Testimonial />
+      </Container>
     </>
   );
 };

@@ -11,6 +11,7 @@ import DJANGO from "./components/django";
 import REACT from "./components/react";
 import DRF from "./components/drf";
 import PYTHON from "./components/python";
+import NAVBAR from "./components/navbar/nav";
 
 const theme = createTheme({
   typography: {
@@ -24,6 +25,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Router>
+        <NAVBAR theme={theme} />
           <Routes>
             <Route path="/" element={<Home theme={theme} />} />
             <Route path="/html" element={<HTML theme={theme} />} />

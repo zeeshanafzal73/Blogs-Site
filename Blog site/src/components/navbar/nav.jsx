@@ -94,8 +94,9 @@ const NAVBAR = ({ theme }) => {
               color: "#7e22ce",
               textDecoration: "none",
             }}
+            onClick={()=>{navigate('/')}}
           >
-            <CodeOutlinedIcon fontSize="large" /> CodeWithZishi
+            <CodeOutlinedIcon fontSize="large"/> CodeWithZishi
           </Typography>
 
           <Box
@@ -133,32 +134,17 @@ const NAVBAR = ({ theme }) => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem onClick={() => navigate("/")}>Home</MenuItem>
+              <MenuItem onClick={() => navigate("/html")}>HTML</MenuItem>
+              <MenuItem onClick={() => navigate("/css")}>CSS</MenuItem>
+              <MenuItem onClick={() => navigate("/js")}>JS</MenuItem>
+              <MenuItem onClick={() => navigate("/react")}>REACT</MenuItem>
+              <MenuItem onClick={() => navigate("/python")}>PYTHON</MenuItem>
+              <MenuItem onClick={() => navigate("/django")}>DJANGO</MenuItem>
+              <MenuItem onClick={() => navigate("/drf")}>DRF</MenuItem>
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          {/* <Typography
-            variant="h6"
-            flexWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: theme.typography.fontFamily,
-              fontWeight: theme.typography.fontWeightBold,
-              letterSpacing: ".1rem",
-              color: "#7e22ce",
-              textDecoration: "none",
-            }}
-          >
-            CodeWithZishi
-          </Typography> */}
           <Box
             sx={{
               flexGrow: 1,
@@ -198,7 +184,7 @@ const NAVBAR = ({ theme }) => {
               flexGrow: 1,
               display: { xs: "flex", md: "none" },
               justifyContent: "center",
-              alignItems:"center"
+              alignItems: "center",
             }}
           >
             <Search>
