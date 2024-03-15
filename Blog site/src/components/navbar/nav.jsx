@@ -76,7 +76,7 @@ const NAVBAR = ({ theme }) => {
   };
 
   return (
-    <AppBar position="static" sx={{ bgcolor: "white" }}>
+    <AppBar position="static" sx={{ bgcolor: "#f9f9f9" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />

@@ -11,55 +11,118 @@ const Footer = () => {
   const linkedInProfileUrl = "https://www.linkedin.com/in/zeeshanaffzal/";
   const GitProfileUrl = "https://github.com/zeeshanafzal73";
   return (
-    <Card
-      sx={{
-        maxWidth: 1550,
-        marginTop: "110px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "20px",
-        backgroundColor: "#f9f9f9",
-        boxShadow: "none",
-        border: "none",
-        borderRadius: "0px",
-      }}
-    >
-      <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="footer">
-            Z
-          </Avatar>
-        }
-        title={
-          <Typography variant="h6" color="text.primary">
-            CodeWithZishi |
-          </Typography>
-        }
+    <>
+      <Card
         sx={{
-          display: "flex",
+          maxWidth: 1550,
+          marginTop: "110px",
+          display: { xs: "none", md: "flex" },
+          flexDirection: { xs: "column", md: "row" },
+          flexWrap: "wrap",
           alignItems: "center",
           justifyContent: "center",
+          padding: "20px",
+          backgroundColor: "#f9f9f9",
+          boxShadow: "none",
+          border: "none",
+          borderRadius: "0px",
         }}
-      />
-      <Typography variant="body2" color="text.secondary" textAlign="center">
-        Copyright © 2024 CodeWithZishi
-      </Typography>
-      <a href={linkedInProfileUrl} target="_blank">
-        <LinkedInIcon
-          fontSize="large"
-          color="primary"
-          style={{ cursor: "pointer", paddingLeft: "10px" }}
+      >
+        <CardHeader
+          avatar={
+            <Avatar sx={{ bgcolor: '#7e22ce' }} aria-label="footer">
+              Z
+            </Avatar>
+          }
+          title={
+            <Typography variant="h6" color="text.primary">
+              CodeWithZishi |
+            </Typography>
+          }
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         />
-      </a>
-      <a href={GitProfileUrl} target="_blank">
-        <GitHubIcon
-          fontSize="large"
-          color="primary"
-          style={{ cursor: "pointer", paddingLeft: "10px" }}
+        <Typography variant="body2" color="text.secondary" textAlign="center">
+          Copyright © 2024 CodeWithZishi
+        </Typography>
+        <a href={linkedInProfileUrl} target="_blank">
+          <LinkedInIcon
+            fontSize="large"
+            color="#7e22ce"
+            style={{ cursor: "pointer", paddingLeft: "10px" }}
+          />
+        </a>
+        <a href={GitProfileUrl} target="_blank">
+          <GitHubIcon
+            fontSize="large"
+            color="#7e22ce"
+            style={{ cursor: "pointer", paddingLeft: "10px" }}
+          />
+        </a>
+      </Card>
+      <Card
+        sx={{
+          maxWidth: 1550,
+          marginTop: "110px",
+          display: { xs: "flex", md: "none" },
+          flexDirection: { xs: "column", md: "row" },
+          flexWrap: "wrap",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "20px",
+          backgroundColor: "#f9f9f9",
+          boxShadow: "none",
+          border: "none",
+          borderRadius: "0px",
+        }}
+      >
+        <CardHeader
+          avatar={
+            <Avatar sx={{ bgcolor: '#7e22ce' }} aria-label="footer">
+              Z
+            </Avatar>
+          }
+          title={
+            <Typography variant="h6" color="text.primary">
+              CodeWithZishi
+            </Typography>
+          }
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         />
-      </a>
-    </Card>
+        <Typography variant="body2" color="text.secondary" textAlign="center">
+          Copyright © 2024 CodeWithZishi
+        </Typography>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: { xs: "10px", md: 0 },
+          }}
+        >
+          <a href={linkedInProfileUrl} target="_blank">
+            <LinkedInIcon
+              fontSize="large"
+              color="#7e22ce"
+              style={{ cursor: "pointer", paddingLeft: "10px" }}
+            />
+          </a>
+          <a href={GitProfileUrl} target="_blank">
+            <GitHubIcon
+              fontSize="large"
+              color="#7e22ce"
+              style={{ cursor: "pointer", paddingLeft: "10px" }}
+            />
+          </a>
+        </div>
+      </Card>
+    </>
   );
 };
 
