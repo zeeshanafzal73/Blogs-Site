@@ -1,7 +1,29 @@
-import React from "react";
 import { Box, Typography, Button, Grid, Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import CardMedia from "@mui/material/CardMedia";
+import React, { useState, useEffect } from "react";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles({
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "100vh",
+    backgroundColor: "#f5f5f5",
+  },
+  title: {
+    fontSize: "4rem",
+    fontWeight: "bold",
+    color: "#7e22ce",
+    animation: "$fadeIn 2s ease-in-out infinite alternate",
+  },
+  "@keyframes fadeIn": {
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+  },
+});
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -12,6 +34,31 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const HeroSection = () => {
+  //for text animations
+  const arr = [
+    "Data Structures",
+    "Css",
+    "Python",
+    "React",
+    "JavaScript",
+    "Django",
+    "Django RestFramework",
+  ];
+
+  const classes = useStyles();
+  const [showText, setShowText] = useState(true);
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setShowText(false);
+      setCurrentTextIndex((prevIndex) =>
+        prevIndex === arr.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000);
+
+    return () => clearInterval(intervalId);
+  }, []);
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
@@ -28,9 +75,18 @@ const HeroSection = () => {
                 Welcome to{" "}
                 <span style={{ color: "#7e22ce" }}>CodeWithZishi</span>
               </Typography>
-              <Typography variant="h5" gutterBottom>
-                Learn DSA
+              <Typography variant="h5" gutterBottom sx={{ display: "flex" }}>
+                Learn{" "}
+                <Typography
+                  className={classes.title}
+                  variant="h5"
+                  sx={{ paddingLeft: "10px" }}
+                >
+                  {showText ? "Html" : arr[currentTextIndex]}
+                </Typography>
               </Typography>
+
+              <Typography variant="h5" gutterBottom></Typography>
               <Typography paragraph>
                 Confused on which course to take? I have got you covered. Browse
                 courses and find out the best course for you. It's free! Code
